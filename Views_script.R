@@ -34,7 +34,7 @@ watches_plot <- read_csv("Date 2020-04-05_2021-04-22 Bioinformatics Virtual Coor
   geom_line(aes(x = month, y = views), size = 1, col = "darkorange",alpha=0.6, linetype="dashed") +
   geom_point(aes(x=month, y=views),pch=21, fill="darkorange", colour="#020202", stroke=1.2, size=3)+
   xlab("Date") +
-  ylab("Monthly \n viewing \ntotals") +
+  ylab("Monthly \n YouTube \nviews") +
   coord_cartesian(ylim=c(0,3000))+
   theme(axis.title.y = element_text(angle = 0, vjust=0.5))
 
@@ -98,11 +98,11 @@ plot1 <- (watches_plot+theme(axis.title.y=element_text(margin = margin(t = 0, r 
 
 Figure1 <- plot1/(slack_plot+theme(axis.title.y=element_text(margin = margin(t = 0, r = -40, b = 0, l = 10))))+plot_layout(heights=c(1,2,1))&  
   theme(plot.tag = element_text(size = 16, face="bold"))
-Figure1a
+Figure1
 
 
-cvdPlot(Figure1a) ### check colour blind compatible
+cvdPlot(Figure1) ### check colour blind compatible
 
 
-### ggsave(plot=Figure1a, "Figure/Figure1.tiff", type="cairo", dpi=300, units="mm", width=180, height=300) ### specifications for Frontiers submission
-### ggsave(plot=Figure1a, "Figure/Figure1.png", type="cairo", dpi=300, units="mm", width=180, height=300) ### specification to embed in Google Doc MS
+### ggsave(plot=Figure1, "Figure/Figure1.tiff", type="cairo", dpi=300, units="mm", width=180, height=300) ### specifications for Frontiers submission
+### ggsave(plot=Figure1, "Figure/Figure1.png", type="cairo", dpi=300, units="mm", width=180, height=300) ### specification to embed in Google Doc MS
